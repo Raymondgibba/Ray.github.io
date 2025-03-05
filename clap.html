@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clap to Turn On Light</title>
+    <link rel="stylesheet" href="clap.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">Clap to Turn On Light</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-details">
+        <h1>Clap to Turn On Light</h1>
+        <img src="clap to on light.webp" alt="Clap to Turn On Light">
+
+        <div class="details-content">
+            <h2>Why is this project important?</h2>
+            <p>
+                The **Clap to Turn On Light** system is a fun and convenient way to control the lighting in a room. It works by detecting a clap sound through a microphone sensor, 
+                making it easier to turn on lights without physically pressing any buttons or switches. This project can be used in smart home systems and helps demonstrate how simple sound-based control systems work.
+            </p>
+
+            <h2>Components Needed</h2>
+            <ul>
+                <li>Arduino Uno</li>
+                <li>Sound Sensor (Microphone Module)</li>
+                <li>LED</li>
+                <li>220-ohm Resistor</li>
+                <li>Jumper Wires</li>
+                <li>Breadboard</li>
+                <li>5V Power Supply</li>
+            </ul>
+
+            <h2>How to Build the Clap to Turn On Light System</h2>
+            <h3>Step 1: Connect the Sound Sensor</h3>
+            <p>
+                The sound sensor detects sound in the environment. Connect the **VCC** to 5V, **GND** to GND, and the **OUT Pin** to Arduino **Pin 2**.
+            </p>
+
+            <h3>Step 2: Connect the LED</h3>
+            <p>
+                The LED will light up when a clap is detected. Connect the **positive (long)** leg of the LED to **Pin 13** on the Arduino and the **negative (short)** leg to GND through a 220-ohm resistor.
+            </p>
+
+            <h3>Step 3: Program the Arduino</h3>
+            <p>
+                Upload the following code to your Arduino:
+            </p>
+            <pre>
+const int soundSensorPin = 2;  // Sound sensor pin
+const int ledPin = 13;         // LED pin
+
+void setup() {
+  pinMode(ledPin, OUTPUT);  // Set LED pin as an output
+  pinMode(soundSensorPin, INPUT);  // Set sound sensor pin as input
+  Serial.begin(9600);  // Initialize serial communication for debugging
+}
+
+void loop() {
+  int soundValue = digitalRead(soundSensorPin);  // Read sound sensor
+  if (soundValue == HIGH) {  // If sound is detected
+    digitalWrite(ledPin, HIGH);  // Turn on LED
+    delay(2000);  // Keep LED on for 2 seconds
+    digitalWrite(ledPin, LOW);  // Turn off LED
+  }
+}
+            </pre>
+
+            <h3>Step 4: Assemble the Circuit</h3>
+            <p>
+                - Connect the components on a breadboard.<br>
+                - Place the sound sensor on the breadboard and wire it to the Arduino.<br>
+                - Connect the LED with the appropriate resistor.<br>
+                - Ensure all connections are secure before powering the Arduino.
+            </p>
+
+            <h3>Step 5: Test the System</h3>
+            <p>
+                After uploading the code, clap your hands near the sound sensor. The LED should turn on for 2 seconds and then turn off. 
+                If the system doesn't work as expected, check the wiring and make sure the sound sensor is placed in an appropriate location for detecting claps.
+            </p>
+        </div>
+
+        <a href="projects.html" class="back-button">Back to Projects</a>
+    </section>
+
+</body>
+</html>

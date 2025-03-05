@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Research</title>
+    <link rel="stylesheet" href="recearch.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Raymond's Research</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="connect.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Research Header -->
+    <header>
+        <h1>My Research Journey</h1>
+        <p>Exploring Innovations in Robotics, Automation, and Smart Technologies</p>
+    </header>
+
+    <!-- Research Sections -->
+    <section class="research-section">
+        <h2>Introduction</h2>
+        <p>
+            Research is at the heart of innovation, and I have dedicated my time to exploring various areas of technology, 
+            including robotics, smart automation, and sustainability. Through these projects, I have tackled real-world problems 
+            and designed solutions that make an impact.
+        </p>
+    </section>
+
+    <section class="research-section">
+        <h2>1. Smart Pet Feeder and Water Dispenser</h2>
+        <p><strong>Objective:</strong> To create an automated system that feeds pets based on their presence and refills their water when necessary.</p>
+        <p><strong>Challenges Faced:</strong> 
+            <ul>
+                <li>Setting accurate ultrasonic sensor thresholds to detect pets without false triggers.</li>
+                <li>Ensuring the water level sensor worked consistently without malfunction.</li>
+            </ul>
+        </p>
+        <p><strong>Solution:</strong> 
+            <ul>
+                <li>Optimized the ultrasonic sensor code to detect only close-range objects.</li>
+                <li>Implemented a real-time feedback system to check water levels before activating the pump.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section class="research-section">
+        <h2>2. Smart Trash Can</h2>
+        <p><strong>Objective:</strong> To develop an intelligent trash bin that opens automatically when approached.</p>
+        <p><strong>Challenges Faced:</strong> 
+            <ul>
+                <li>Calibrating the servo motor for smooth lid movement.</li>
+                <li>Minimizing power consumption to increase battery efficiency.</li>
+            </ul>
+        </p>
+        <p><strong>Solution:</strong> 
+            <ul>
+                <li>Used a delay mechanism to ensure the lid remained open long enough before closing.</li>
+                <li>Added a sleep mode to reduce power usage when not in use.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section class="research-section">
+        <h2>3. Fire Sensor System</h2>
+        <p><strong>Objective:</strong> To build a fire detection system using an Arduino and flame sensor.</p>
+        <p><strong>Challenges Faced:</strong> 
+            <ul>
+                <li>Ensuring the sensor detected fire without reacting to regular light sources.</li>
+                <li>Triggering an alert system quickly enough for emergency response.</li>
+            </ul>
+        </p>
+        <p><strong>Solution:</strong> 
+            <ul>
+                <li>Fine-tuned the sensor sensitivity to differentiate between normal light and flames.</li>
+                <li>Integrated a buzzer and an LED indicator for instant alerts.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section class="research-section">
+        <h2>4. Water Level Alert System</h2>
+        <p><strong>Objective:</strong> To create an alert system that notifies when a water tank is almost full.</p>
+        <p><strong>Challenges Faced:</strong> 
+            <ul>
+                <li>Ensuring the sensor accurately detected different water levels.</li>
+                <li>Preventing false alarms caused by water turbulence.</li>
+            </ul>
+        </p>
+        <p><strong>Solution:</strong> 
+            <ul>
+                <li>Positioned the sensor at an optimal level to detect the final threshold only.</li>
+                <li>Implemented a delay function to reduce sensitivity to minor fluctuations.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section class="research-section">
+        <h2>5. Lettuce Production Research</h2>
+        <p><strong>Objective:</strong> To analyze and improve lettuce farming techniques in Brikama.</p>
+        <p><strong>Challenges Faced:</strong> 
+            <ul>
+                <li>Finding reliable data on local production rates.</li>
+                <li>Identifying factors affecting crop yield and sustainability.</li>
+            </ul>
+        </p>
+        <p><strong>Solution:</strong> 
+            <ul>
+                <li>Conducted field studies to gather data from local farmers.</li>
+                <li>Proposed smart irrigation and nutrient management solutions.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section class="research-section">
+        <h2>Future Research Goals</h2>
+        <p>
+            My journey in research and innovation continues. In the future, I plan to explore:
+            <ul>
+                <li>AI integration into robotics for enhanced automation.</li>
+                <li>Smart composting systems to improve waste management.</li>
+                <li>Renewable energy solutions for sustainable farming.</li>
+            </ul>
+            Research is an ongoing process, and I am excited to push the boundaries of technology to create meaningful solutions.
+        </p>
+    </section>
+    
+    <!-- Scroll to Top Button -->
+<button onclick="scrollToTop()" id="scrollBtn" title="Go to top">⬆</button>
+     <!-- Back to Home Button -->
+<div class="button-container">
+    <a href="index.html" class="home-button">Back to Home</a>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Raymond Gibba | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
+<script>
+    // Show or hide the scroll button based on scrolling position
+    window.onscroll = function () {
+        var scrollBtn = document.getElementById("scrollBtn");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            scrollBtn.style.display = "block";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    };
+
+    // Function to scroll back to top smoothly
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>

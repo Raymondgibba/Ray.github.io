@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raymond Gibba's Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Raymond Gibba</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="learn.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <header id="home">
+        <img src="WhatsApp Image 2025-03-01 at 18.16.23.jpeg" alt="Raymond Gibba" class="profile-pic">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my work, projects, and experience in robotics and technology</p>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Hello! I'm Raymond Gibba, a passionate robotics enthusiast and engineer. With a strong foundation in embedded systems, automation, and smart technology, I have worked on several innovative projects using Arduino and other platforms. My goal is to solve real-world problems through robotics, sustainability, and environmental consciousness.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project">
+                <h3>Smart Pet Feeder</h3>
+                <p>An Arduino-based system that automatically dispenses food for your pets based on distance detected by an ultrasonic sensor.</p>
+            </div>
+            <div class="project">
+                <h3>Smart Trash Can</h3>
+                <p>A trash can with an automated lid that opens when it detects motion, making it hands-free and more convenient to use.</p>
+            </div>
+            <div class="project">
+                <h3>Fire Detection System</h3>
+                <p>This system uses a smoke sensor to detect fire, alerting you immediately to prevent further damage or danger.</p>
+            </div>
+            <div class="project">
+                <h3>Water Level Alert System</h3>
+                <p>A system built with an Arduino that uses a water level sensor to detect when a tank is full and triggers an alarm to notify the user.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <ul>
+            <li>Robotics & Embedded Systems</li>
+            <li>Arduino Programming</li>
+            <li>Automation Systems</li>
+            <li>Problem Solving & Critical Thinking</li>
+            <li>Team Leadership & Collaboration</li>
+            <li>Sustainability Solutions</li>
+            <li>Web Development (HTML, CSS)</li>
+        </ul>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <h2>Experience</h2>
+        <div class="experience-item">
+            <h3>Student Trainer at Sky Lab</h3>
+            <p>As a student trainer, I help guide students in building robotics projects and prepare them for competitions like the FIRST Global Challenge.</p>
+        </div>
+        <div class="experience-item">
+            <h3>Robotics Mentor</h3>
+            <p>Mentored young engineers by teaching them how to create innovative projects, encouraging them to think critically and creatively.</p>
+        </div>
+        <div class="experience-item">
+            <h3>Project Lead: Environmental Robotics</h3>
+            <p>Led a project focused on using robotics for environmental conservation and sustainability, aiming to create solutions that benefit the planet.</p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>Bachelor's Degree in Robotics Engineering</h3>
+            <p>University of Gambia | Graduated: 2025</p>
+        </div>
+        <div class="education-item">
+            <h3>Certifications in Robotics and Automation</h3>
+            <p>Online Platforms | 2024</p>
+        </div>
+        <div class="education-item">
+            <h3>FIRST Global Challenge Robotics Participant</h3>
+            <p>Competed in global robotics challenges, where I led a team and developed solutions for real-world problems.</p>
+        </div>
+    </section>
+
+    
+     <!-- Scroll to Top Button -->
+<button onclick="scrollToTop()" id="scrollBtn" title="Go to top">⬆</button>
+<!-- Back to Home Button -->
+<div class="button-container">
+<a href="index.html" class="home-button">Back to Home</a>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Raymond Gibba. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
+<script>
+    // Show or hide the scroll button based on scrolling position
+    window.onscroll = function () {
+        var scrollBtn = document.getElementById("scrollBtn");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            scrollBtn.style.display = "block";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    };
+
+    // Function to scroll back to top smoothly
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>

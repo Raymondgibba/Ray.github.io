@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Raymond Gibba</title>
+    <link rel="stylesheet" href="pro.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Raymond Gibba</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="train.html">Trainings</a></li>
+                <li><a href="learn.html">About</a></li>
+                <li><a href="connect.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="projects">
+        <h1>My Projects</h1>
+
+        <div class="project-container">
+            <!-- Smart Pet Feeder -->
+            <div class="project">
+                <img src="smart pet feeder.webp" alt="Smart Pet Feeder">
+                <h2>Smart Pet Feeder</h2>
+                <p><strong>Aim:</strong> Automatically dispense food for pets.</p>
+                <button onclick="window.location.href='feeder.html'">View Details</button>
+            </div>
+
+            <!-- Fire Detection System -->
+            <div class="project">
+                <img src="IR3-Flame-detector-gecomprimeerd.jpg" alt="Fire Detection System">
+                <h2>Fire Detection System</h2>
+                <p><strong>Aim:</strong> Detect fires early and alert users.</p>
+                <button onclick="window.location.href='fire.html'">View Details</button>
+            </div>
+
+            <!-- Smart Trash Can -->
+            <div class="project">
+                <img src="smart-waste-basket-electronic-gadget-home-white-background-295845575.webp" alt="Smart Trash Can">
+                <h2>Smart Trash Can</h2>
+                <p><strong>Aim:</strong> Opens automatically for hygiene.</p>
+                <button onclick="window.location.href='smart.html'">View Details</button>
+            </div>
+
+            <!-- Clap to Turn On Light -->
+            <div class="project">
+                <img src="clap to on light.webp" alt="Clap Activated Light">
+                <h2>Clap to Turn On Light</h2>
+                <p><strong>Aim:</strong> Control lights with sound.</p>
+                <button onclick="window.location.href='clap.html'">View Details</button>
+            </div>
+
+            <!-- Water Level Sensor -->
+            <div class="project">
+                <img src="water.webp" alt="Water Level Sensor">
+                <h2>Water Level Sensor</h2>
+                <p><strong>Aim:</strong> Alerts when water is high.</p>
+                <button onclick="window.location.href='water.html'">View Details</button>
+            </div>
+
+            <!-- Smart Irrigation -->
+            <div class="project">
+                <img src="irrigation.jpg" alt="Smart Irrigation System">
+                <h2>Smart Irrigation System</h2>
+                <p><strong>Aim:</strong> Auto-waters plants.</p>
+                <button onclick="window.location.href='irr.html'">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section (Hidden by Default) -->
+    <div id="projectDetails" class="details-popup">
+        <div class="details-content">
+            <span class="close-btn" onclick="closeDetails()">&times;</span>
+            <h2 id="detailsTitle"></h2>
+            <p id="detailsText"></p>
+        </div>
+    </div>
+    
+ <!-- Scroll to Top Button -->
+ <button onclick="scrollToTop()" id="scrollBtn" title="Go to top">⬆</button>
+ <!-- Back to Home Button -->
+ <div class="button-container">
+ <a href="index.html" class="home-button">Back to Home</a>
+ 
+
+    <script>
+        function showDetails(project) {
+            let title = document.getElementById("detailsTitle");
+            let text = document.getElementById("detailsText");
+
+            const projects = {
+                petFeeder: {
+                    title: "Smart Pet Feeder",
+                    text: "Uses an ultrasonic sensor to detect pets and a servo motor to dispense food automatically."
+                },
+                fireDetection: {
+                    title: "Fire Detection System",
+                    text: "Detects fire using a flame sensor and alerts through a buzzer and LED."
+                },
+                smartTrash: {
+                    title: "Smart Trash Can",
+                    text: "Opens automatically when someone approaches using an ultrasonic sensor."
+                },
+                clapLight: {
+                    title: "Clap to Turn On Light",
+                    text: "Uses a sound sensor to detect claps and switches lights on/off."
+                },
+                waterLevel: {
+                    title: "Water Level Sensor",
+                    text: "Alerts when water reaches a certain level using a buzzer and LED."
+                },
+                smartIrrigation: {
+                    title: "Smart Irrigation System",
+                    text: "Automatically waters plants using a soil moisture sensor and a water pump."
+                }
+            };
+
+            if (projects[project]) {
+                title.innerText = projects[project].title;
+                text.innerText = projects[project].text;
+                document.getElementById("projectDetails").style.display = "block";
+            }
+        }
+
+        function closeDetails() {
+            document.getElementById("projectDetails").style.display = "none";
+        }
+
+        // Show or hide the scroll button based on scrolling position
+    window.onscroll = function () {
+        var scrollBtn = document.getElementById("scrollBtn");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            scrollBtn.style.display = "block";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    };
+
+    // Function to scroll back to top smoothly
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>

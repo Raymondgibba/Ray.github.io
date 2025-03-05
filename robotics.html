@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Robotics</title>
+    <link rel="stylesheet" href="robotics.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Explore Robotics</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="connect.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header>
+        <h1>Discover the World of Robotics</h1>
+        <p>Dive into the future of automation, AI, and smart systems.</p>
+    </header>
+
+    <!-- Sections for Robotics Topics -->
+    <section class="robotics-section">
+        <h2>Introduction to Robotics</h2>
+        <p>
+            Robotics is the integration of hardware and software to create intelligent machines that can assist in automation, 
+            problem-solving, and human interactions. From industrial robots to AI-driven assistants, robotics is shaping the future.
+        </p>
+    </section>
+
+    <section class="robotics-section">
+        <h2>1. Basics of Arduino</h2>
+        <p><strong>Objective:</strong> Understanding how to use Arduino for robotics.</p>
+        <p><strong>Key Learning Points:</strong> 
+            <ul>
+                <li>Using sensors to interact with the environment.</li>
+                <li>Controlling motors for robotic movement.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section class="robotics-section">
+        <h2>2. AI and Machine Learning in Robotics</h2>
+        <p><strong>Objective:</strong> Explore how AI improves robot decision-making.</p>
+        <p><strong>Applications:</strong> 
+            <ul>
+                <li>Self-driving cars and drones.</li>
+                <li>AI-powered robotic assistants.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section class="robotics-section">
+        <h2>3. Robotics in Automation</h2>
+        <p><strong>Objective:</strong> Understand how robotics is transforming industries.</p>
+        <p><strong>Examples:</strong> 
+            <ul>
+                <li>Factory automation with robotic arms.</li>
+                <li>Smart homes with AI-driven robotics.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section class="robotics-section">
+        <h2>Future of Robotics</h2>
+        <p>
+            Robotics is evolving rapidly, with advancements in AI, IoT, and automation. In the future, we can expect:
+            <ul>
+                <li>Fully autonomous robots for space exploration.</li>
+                <li>AI-powered robots in healthcare and education.</li>
+            </ul>
+        </p>
+    </section>
+    
+    <!-- Scroll to Top Button -->
+    <button onclick="scrollToTop()" id="scrollBtn" title="Go to top">⬆</button>
+
+    <!-- Back to Home Button -->
+    <div class="button-container">
+        <a href="index.html" class="home-button">Back to Home</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Raymond Gibba | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
+
+<script>
+    // Show or hide the scroll button based on scrolling position
+    window.onscroll = function () {
+        var scrollBtn = document.getElementById("scrollBtn");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            scrollBtn.style.display = "block";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    };
+
+    // Function to scroll back to top smoothly
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>

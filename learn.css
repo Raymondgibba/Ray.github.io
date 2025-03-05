@@ -1,0 +1,219 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-items: center;
+}
+
+.homeB {
+    display: inline-block;
+    background: #2575fc;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    
+}
+
+.logo {
+    color: #ff7f00;
+    font-size: 22px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Logo Hover Effect */
+.logo:hover {
+    color: #ff4500;
+    transform: scale(1.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+/* Navigation Hover Effect */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff7f00;
+    transform: scale(1.1);
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    padding: 20px 10px;
+    background: linear-gradient(to right, #2022b4, #1c2a42);
+    color: white;
+}
+
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Profile Picture Hover */
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+/* Section Styling */
+.about-section, .skills-section, .achievements-section, .timeline-section, footer {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill {
+    background: #6a11cb;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Skill Hover Effect */
+.skill:hover {
+    background: #ff7f00;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Timeline Section */
+.timeline {
+    position: relative;
+}
+
+.timeline-item {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #2575fc;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Timeline Hover Effect */
+.timeline-item:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Footer Hover Effect */
+footer:hover {
+    transform: scale(1.02);
+}
+/* Back to Home Button */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home-button {
+    display: inline-block;
+    background: #2575fc;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: bounce 1.5s infinite; /* Added bouncing effect */
+}
+
+/* Hover Effect */
+.home-button:hover {
+    background: #6a11cb;
+    transform: scale(1.05);
+}
+
+/* Scroll to Top Button */
+#scrollBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #ff7f00;
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    z-index: 1000; /* Ensures button stays on top */
+    animation: bounce 1.5s infinite; /* Added bouncing effect */
+}
+
+/* Hover Effect */
+#scrollBtn:hover {
+    background: #ff9500;
+    transform: scale(1.1);
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+.back-button {
+    display: inline-block;
+    background: #2575fc;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: bounce 1.5s infinite; /* Added bouncing effect */
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Trash Can</title>
+    <link rel="stylesheet" href="smart.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">Smart Trash Can</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-details">
+        <h1>Smart Trash Can</h1>
+        <img src="smart-waste-basket-electronic-gadget-home-white-background-295845575.webp" alt="Smart Trash Can">
+
+        <div class="details-content">
+            <h2>Why is this project important?</h2>
+            <p>
+                The Smart Trash Can is designed to open its lid automatically when it detects a person approaching, making it more hygienic and user-friendly. 
+                This helps prevent users from having to touch the lid, reducing the spread of germs and improving the overall convenience of discarding trash. 
+                Additionally, the system helps conserve energy by ensuring the lid only opens when necessary.
+            </p>
+
+            <h2>Components Needed</h2>
+            <ul>
+                <li>Arduino Uno</li>
+                <li>Ultrasonic Sensor (HC-SR04)</li>
+                <li>Servo Motor (SG90 or MG995)</li>
+                <li>Jumper Wires</li>
+                <li>5V Power Supply</li>
+                <li>Plastic Container (for trash can body)</li>
+                <li>Servo Mount (to attach the servo to the lid)</li>
+                <li>Breadboard (for testing connections)</li>
+            </ul>
+
+            <h2>How to Build the Smart Trash Can</h2>
+            <h3>Step 1: Connect the Ultrasonic Sensor</h3>
+            <p>
+                The ultrasonic sensor detects the presence of a person near the trash can. Connect the **VCC** to 5V, **GND** to GND, 
+                **Trigger Pin** to Arduino **Pin 2**, and **Echo Pin** to **Pin 3**.
+            </p>
+
+            <h3>Step 2: Connect the Servo Motor</h3>
+            <p>
+                The servo motor controls the lid of the trash can. Connect the **VCC** to 5V, **GND** to GND, and the **Signal Pin** to **Pin 9** on the Arduino.
+            </p>
+
+            <h3>Step 3: Program the Arduino</h3>
+            <p>
+                Upload the following code to your Arduino:
+            </p>
+            <pre>
+#include &lt;Servo.h&gt;
+Servo lidServo;
+const int trigPin = 2;
+const int echoPin = 3;
+
+void setup() {
+    lidServo.attach(9);
+    pinMode(trigPin, OUTPUT);
+    pinMode(echoPin, INPUT);
+    Serial.begin(9600);
+}
+
+void loop() {
+    digitalWrite(trigPin, LOW);
+    delayMicroseconds(2);
+    digitalWrite(trigPin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trigPin, LOW);
+
+    int duration = pulseIn(echoPin, HIGH);
+    int distance = duration * 0.034 / 2;
+
+    if (distance < 20) {
+        lidServo.write(90);  // Open lid
+        delay(5000);         // Keep lid open for 5 seconds
+        lidServo.write(0);   // Close lid
+    }
+
+    delay(500);
+}
+            </pre>
+
+            <h3>Step 4: Assemble the Trash Can</h3>
+            <p>
+                - Cut a hole in the top of a plastic container for the servo motor to control the lid.<br>
+                - Attach the servo motor to the lid of the trash can.<br>
+                - Position the ultrasonic sensor near the front of the trash can.<br>
+                - Mount the components securely in a stable position.
+            </p>
+
+            <h3>Step 5: Power & Test</h3>
+            <p>
+                Power the system using a 5V supply and test it by moving your hand or any object near the sensor. 
+                The trash can lid should open when the sensor detects something and close after 5 seconds.
+            </p>
+        </div>
+
+        <a href="projects.html" class="back-button">Back to Projects</a>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Level Alert System</title>
+    <link rel="stylesheet" href="water.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">Water Level Alert System</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-details">
+        <h1>Water Level Alert System</h1>
+        <img src="water.webp" alt="Water Level Sensor">
+
+        <div class="details-content">
+            <h2>Why is this project important?</h2>
+            <p>
+                The **Water Level Alert System** is essential for monitoring water levels in tanks or reservoirs. It uses a water level sensor to detect whether the tank is full or low. 
+                The system alerts the user using a buzzer when the water reaches a certain level, helping to prevent overflows or dry tank conditions. This is particularly useful in water management systems.
+            </p>
+
+            <h2>Components Needed</h2>
+            <ul>
+                <li>Arduino Uno</li>
+                <li>Water Level Sensor</li>
+                <li>Buzzer</li>
+                <li>Jumper Wires</li>
+                <li>Breadboard</li>
+                <li>5V Power Supply</li>
+            </ul>
+
+            <h2>How to Build the Water Level Alert System</h2>
+            <h3>Step 1: Connect the Water Level Sensor</h3>
+            <p>
+                The water level sensor detects the water level in the tank. Connect the **VCC** to 5V, **GND** to GND, and the **OUT Pin** to Arduino **Pin 2**.
+            </p>
+
+            <h3>Step 2: Connect the Buzzer</h3>
+            <p>
+                The buzzer will sound when the water level reaches the desired point. Connect the **positive leg** of the buzzer to **Pin 13** on the Arduino and the **negative leg** to GND.
+            </p>
+
+            <h3>Step 3: Program the Arduino</h3>
+            <p>
+                Upload the following code to your Arduino:
+            </p>
+            <pre>
+const int waterLevelPin = 2;  // Water level sensor pin
+const int buzzerPin = 13;     // Buzzer pin
+
+void setup() {
+  pinMode(buzzerPin, OUTPUT);  // Set buzzer pin as output
+  pinMode(waterLevelPin, INPUT);  // Set water level sensor pin as input
+  Serial.begin(9600);  // Initialize serial communication for debugging
+}
+
+void loop() {
+  int waterLevel = digitalRead(waterLevelPin);  // Read water level sensor
+  if (waterLevel == HIGH) {  // If water level is detected
+    digitalWrite(buzzerPin, HIGH);  // Activate the buzzer
+    delay(1000);  // Buzzer sound duration
+    digitalWrite(buzzerPin, LOW);  // Deactivate the buzzer
+  }
+}
+            </pre>
+
+            <h3>Step 4: Assemble the Circuit</h3>
+            <p>
+                - Place the water level sensor in the water tank and wire it to the Arduino.<br>
+                - Connect the buzzer with the appropriate wiring.<br>
+                - Make sure all connections are secure before powering up the system.
+            </p>
+
+            <h3>Step 5: Test the System</h3>
+            <p>
+                After uploading the code, place the water level sensor at different heights in the water tank. The buzzer should sound when the water reaches the sensor. 
+                If it doesn't work, check your wiring and ensure the sensor is submerged correctly.
+            </p>
+        </div>
+
+        <a href="projects.html" class="back-button">Back to Projects</a>
+    </section>
+
+</body>
+</html>

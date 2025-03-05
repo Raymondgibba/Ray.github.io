@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raymond Gibba - Robotics Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Raymond Gibba</div>
+            <ul>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="recearch.html">Research</a></li>
+                <li><a href="train.html">Training</a></li>
+            </ul>
+            <a href="connect.html" class="contact-btn">Let's Connect</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Hi, I'm <span>Raymond Gibba</span></h1>
+            <h2>Robotics & Embedded Systems Engineer</h2>
+            <p>Passionate about robotics, automation, and problem-solving, I specialize in Arduino-based projects and AI-driven solutions to enhance smart technologies.</p>
+            <div class="buttons">
+                <a href="robotics.html" class="btn black">Explore Robotics</a>
+                <a href="#" class="btn orange">Hire Me</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="WhatsApp Image 2025-03-01 at 18.16.23.jpeg" alt="Raymond Gibba">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>I am a passionate robotics engineer with a focus on embedded systems and automation. Through my work, I aim to inspire the next generation of innovators and engineers by creating real-world solutions that harness the power of technology to tackle global challenges.</p>
+            <p><span class="highlight">My Mission</span>: To empower young minds through hands-on learning and foster creativity in the field of robotics and automation.</p>
+            <a href="learn.html" class="btn">Learn More</a>
+        </div>
+        <div class="about-image">
+            <img src="holding robot.jpeg" alt="About Image">
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-list">
+            <div class="project">
+                <img src="smart pet feeder.webp" alt="Smart Pet Feeder">
+                <h3>Smart Pet Feeder</h3>
+                <p>An Arduino-based automatic pet feeder that dispenses food using an ultrasonic sensor.</p>
+            </div>
+            <div class="project">
+                <img src="smart-waste-basket-electronic-gadget-home-white-background-295845575.webp" alt="Smart Trash Can">
+                <h3>Smart Trash Can</h3>
+                <p>A self-opening trash bin using an ultrasonic sensor and servo motor.</p>
+            </div>
+            <div class="project">
+                <img src="IR3-Flame-detector-gecomprimeerd.jpg" alt="Fire Sensor">
+                <h3>Fire Detection System</h3>
+                <p>A fire sensor system that alerts users when a flame is detected.</p>
+            </div>
+        </div>
+        <!-- Back to Home Button -->
+<div class="button-container">
+    <a href="projects.html" class="home-button">View Projects</a>    
+</div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>Let's collaborate on something amazing! Feel free to reach out for project inquiries, collaborations, or mentorship.</p>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn black">Send Message</button>
+        </form>
+    </section>
+     <!-- Scroll to Top Button -->
+<button onclick="scrollToTop()" id="scrollBtn" title="Go to top">⬆</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Raymond Gibba | Robotics Engineer & STEM Educator</p>
+    </footer>
+
+</body>
+
+</html>
+<script>
+    // Show or hide the scroll button based on scrolling position
+    window.onscroll = function () {
+        var scrollBtn = document.getElementById("scrollBtn");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            scrollBtn.style.display = "block";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    };
+
+    // Function to scroll back to top smoothly
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>

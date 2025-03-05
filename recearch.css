@@ -1,0 +1,150 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    color: #ff7f00;
+    font-size: 22px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+/* Logo Hover Effect */
+.logo:hover {
+    transform: scale(1.1);
+    color: #ff9500;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Navigation Hover Effect */
+.nav-links a:hover {
+    color: #ff7f00;
+    transform: scale(1.1);
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+}
+
+/* Research Section */
+.research-section {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Research Sections */
+.research-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Footer Hover Effect */
+footer:hover {
+    background-color: #333;
+}
+
+/* Back to Home Button */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home-button {
+    display: inline-block;
+    background: #2575fc;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: bounce 1.5s infinite; /* Added bouncing effect */
+}
+
+/* Hover Effect */
+.home-button:hover {
+    background: #6a11cb;
+    transform: scale(1.05);
+}
+
+/* Scroll to Top Button */
+#scrollBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #ff7f00;
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    z-index: 1000; /* Ensures button stays on top */
+    animation: bounce 1.5s infinite; /* Added bouncing effect */
+}
+
+/* Hover Effect */
+#scrollBtn:hover {
+    background: #ff9500;
+    transform: scale(1.1);
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}

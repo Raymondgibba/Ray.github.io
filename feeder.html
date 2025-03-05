@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Pet Feeder</title>
+    <link rel="stylesheet" href="feeder.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">Smart Pet Feeder</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <section class="project-details">
+        <h1>Smart Pet Feeder</h1>
+        <img src="smart pet feeder.webp" alt="Smart Pet Feeder">
+
+        <div class="details-content">
+            <h2>Why is this project important?</h2>
+            <p>
+                The Smart Pet Feeder is designed to automatically dispense food for pets at scheduled times or when they approach the feeder. 
+                This ensures that pets are well-fed, even when their owners are not at home. 
+                It also prevents overfeeding by controlling portion sizes. The system is particularly beneficial for busy pet owners and can be 
+                used for dogs, cats, and even birds. Additionally, it helps in maintaining hygiene as food is only dispensed when needed, 
+                reducing contamination and waste.
+            </p>
+
+            <h2>Components Needed</h2>
+            <ul>
+                <li>Arduino Uno</li>
+                <li>Ultrasonic Sensor (HC-SR04)</li>
+                <li>Servo Motor (SG90 or MG995)</li>
+                <li>Jumper Wires</li>
+                <li>5V Power Supply</li>
+                <li>Plastic Container (for food storage)</li>
+                <li>Small Pipe or Funnel (to direct food)</li>
+                <li>Breadboard (for testing connections)</li>
+            </ul>
+
+            <h2>How to Build the Smart Pet Feeder</h2>
+            <h3>Step 1: Connect the Ultrasonic Sensor</h3>
+            <p>
+                The ultrasonic sensor is used to detect when the pet is near the feeder. Connect the **VCC** to 5V, **GND** to GND, 
+                **Trigger Pin** to Arduino **Pin 2**, and **Echo Pin** to **Pin 3**.
+            </p>
+
+            <h3>Step 2: Connect the Servo Motor</h3>
+            <p>
+                The servo motor controls the food dispenser. Connect the **VCC** to 5V, **GND** to GND, and the **Signal Pin** to **Pin 9** on the Arduino.
+            </p>
+
+            <h3>Step 3: Program the Arduino</h3>
+            <p>
+                Upload the following code to your Arduino:
+            </p>
+            <pre>
+#include &lt;Servo.h&gt;
+Servo foodServo;
+const int trigPin = 2;
+const int echoPin = 3;
+
+void setup() {
+    foodServo.attach(9);
+    pinMode(trigPin, OUTPUT);
+    pinMode(echoPin, INPUT);
+    Serial.begin(9600);
+}
+
+void loop() {
+    digitalWrite(trigPin, LOW);
+    delayMicroseconds(2);
+    digitalWrite(trigPin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trigPin, LOW);
+
+    int duration = pulseIn(echoPin, HIGH);
+    int distance = duration * 0.034 / 2;
+
+    if (distance < 20) {
+        foodServo.write(124); // Open
+        delay(2000);
+        foodServo.write(9);   // Close
+    }
+
+    delay(500);
+}
+            </pre>
+
+            <h3>Step 4: Assemble the Feeder</h3>
+            <p>
+                - Cut a hole in a plastic container for food dispensing.<br>
+                - Attach the servo motor to a small flap that opens and closes.<br>
+                - Place the ultrasonic sensor at the front to detect the pet.<br>
+                - Mount all components securely in a stable position.
+            </p>
+
+            <h3>Step 5: Power & Test</h3>
+            <p>
+                Power the system using a 5V supply and test it by moving an object (or a pet) near the sensor.
+                The feeder should open when the pet is detected and close after 2 seconds.
+            </p>
+        </div>
+
+        <a href="projects.html" class="back-button">Back to Projects</a>
+    </section>
+
+</body>
+</html>

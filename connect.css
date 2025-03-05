@@ -1,0 +1,253 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+.logo {
+    color: #ff7f00;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Logo Hover Effect */
+.logo:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Navigation Hover Effect */
+.nav-links a:hover {
+    color: #ff7f00;
+    transform: scale(1.1);
+}
+
+/* Section Padding and Layout */
+.section {
+    padding: 60px 20px;
+    margin: auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+h2, h3 {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Let's Connect Section */
+#contact {
+    padding: 80px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+/* Contact Details Styling */
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contact-item {
+    background-color: #ff7f00;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.contact-item h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.contact-item p {
+    color: #fff;
+    font-size: 18px;
+}
+
+.contact-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Social Links Styling */
+.social-links ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.social-links .social-link {
+    color: #ff7f00;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #ff7f00;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    animation: bounce 1.5s infinite;
+}
+
+/* Hover Effect */
+.social-links .social-link:hover {
+    background-color: #ff7f00;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* Contact Form Styling */
+.contact-form {
+    margin-top: 40px;
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    margin-bottom: 15px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #ff7f00;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Get in Touch Button Styling */
+.getintouch {
+    display: inline-block;
+    background-color: #ff7f00;
+    padding: 15px 30px;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 127, 0, 0.6);
+    animation: pulse 1.5s infinite;
+}
+
+/* Hover Effect */
+.getintouch:hover {
+    background-color: #e06e00;
+    box-shadow: 0 8px 20px rgba(255, 127, 0, 0.8);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    margin-top: 60px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form button {
+        font-size: 16px;
+    }
+}

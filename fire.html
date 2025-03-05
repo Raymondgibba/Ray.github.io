@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Alarm System</title>
+    <link rel="stylesheet" href="fire.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">My Project</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-details">
+        <h1>Fire Alarm System</h1>
+        <img src="IR3-Flame-detector-gecomprimeerd.jpg" alt="Fire Alarm System">
+
+        <div class="details-content">
+            <h2>Why is this project important?</h2>
+            <p>
+                The Fire Alarm System is designed to detect smoke or fire and alert users in case of an emergency. 
+                This project uses sensors to monitor the environment and activate an alarm when smoke levels exceed a safe threshold. 
+                It is crucial for ensuring safety in homes, offices, and public spaces by providing early warnings before a fire becomes dangerous.
+            </p>
+
+            <h2>Components Needed</h2>
+            <ul>
+                <li>Arduino Uno</li>
+                <li>MQ-2 Gas Sensor</li>
+                <li>Buzzer</li>
+                <li>Jumper Wires</li>
+                <li>5V Power Supply</li>
+                <li>LED (Optional for visual indication)</li>
+            </ul>
+
+            <h2>How to Build the Fire Alarm System</h2>
+            <h3>Step 1: Connect the MQ-2 Gas Sensor</h3>
+            <p>
+                The MQ-2 gas sensor detects smoke or gas. Connect the **VCC** to 5V, **GND** to GND, **Analog Pin** to **A0** on the Arduino.
+            </p>
+
+            <h3>Step 2: Connect the Buzzer</h3>
+            <p>
+                The buzzer will alert users when smoke is detected. Connect the **VCC** to 5V, **GND** to GND, and the **Signal Pin** to **Pin 8** on the Arduino.
+            </p>
+
+            <h3>Step 3: Program the Arduino</h3>
+            <p>
+                Upload the following code to your Arduino:
+            </p>
+            <pre>
+#include &lt;MQ2.h&gt;
+
+int smokePin = A0;  // Pin for MQ-2 sensor
+int buzzerPin = 8;  // Pin for the buzzer
+int smokeLevel = 0; // Variable to store the smoke level reading
+
+void setup() {
+    pinMode(buzzerPin, OUTPUT);
+    Serial.begin(9600);
+}
+
+void loop() {
+    smokeLevel = analogRead(smokePin);
+    Serial.println(smokeLevel);
+    
+    // Check if the smoke level is high enough
+    if (smokeLevel > 400) {
+        digitalWrite(buzzerPin, HIGH); // Turn on the buzzer
+    } else {
+        digitalWrite(buzzerPin, LOW);  // Turn off the buzzer
+    }
+
+    delay(1000);
+}
+            </pre>
+
+            <h3>Step 4: Assemble the System</h3>
+            <p>
+                - Mount the MQ-2 sensor in a well-ventilated area.<br>
+                - Connect the buzzer where it can be heard easily.<br>
+                - Make sure the sensor is placed high to detect smoke properly.
+            </p>
+
+            <h3>Step 5: Power & Test</h3>
+            <p>
+                Power the system using a 5V supply. Test by producing smoke near the sensor or using a lighter to check if the alarm goes off.
+            </p>
+        </div>
+
+        <a href="projects.html" class="back-button">Back to Projects</a>
+    </section>
+
+</body>
+</html>

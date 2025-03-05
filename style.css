@@ -1,0 +1,491 @@
+/* General Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff7f00;
+}
+
+nav .contact-btn {
+    background-color: #ff7f00;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav .contact-btn:hover {
+    background-color: #e06e00;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 20px;
+    background-color: #222;
+    color: #fff;
+    flex-wrap: wrap; /* Allow wrap on smaller screens */
+}
+
+.hero .hero-text {
+    max-width: 600px;
+    padding-right: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #ff7f00;
+}
+
+.hero h1 {
+    color: #ffffff;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
+
+.hero .buttons {
+    margin-top: 20px;
+}
+
+.hero .btn {
+    background-color: #ff7f00;
+    padding: 12px 25px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    margin-right: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #e06e00;
+}
+
+.hero .hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 1200px;
+    flex-wrap: wrap; /* Allow wrap on smaller screens */
+}
+
+.about-text {
+    max-width: 600px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    padding-right: 40px;
+}
+
+.about h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.about-text .highlight {
+    color: #ff7f00;
+    font-weight: bold;
+}
+
+.about-text .btn {
+    background-color: #ff7f00;
+    padding: 12px 30px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.about-text .btn:hover {
+    background-color: #e06e00;
+}
+
+.about-image {
+    max-width: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Featured Projects Section */
+.projects {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.project {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.project h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.project p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+/* Back to Home Button */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home-button {
+    display: inline-block;
+    background: #2575fc;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: bounce 1.5s infinite; /* Added bouncing effect */
+}
+
+/* Hover Effect */
+.home-button:hover {
+    background: #6a11cb;
+    transform: scale(1.05);
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Contact Section */
+.contact {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contact .btn {
+    background-color: #ff7f00;
+    padding: 12px 30px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact .btn:hover {
+    background-color: #e06e00;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #ff7f00, #ff4500);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Scroll to Top Button */
+#scrollBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #ff7f00;
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    z-index: 1000; /* Ensures button stays on top */
+    animation: bounce 1.5s infinite; /* Added bouncing effect */
+}
+
+/* Hover Effect */
+#scrollBtn:hover {
+    background: #ff9500;
+    transform: scale(1.1);
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 1200px) {
+    .hero,
+    .about,
+    .projects {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero .hero-text,
+    .about-text {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .about {
+        max-width: 100%;
+        padding: 40px 20px;
+    }
+
+    .project-list {
+        justify-content: center;
+    }
+
+    .project {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p,
+    .about-text p,
+    .projects h2 {
+        font-size: 1rem;
+    }
+
+    .contact form input,
+    .contact form textarea {
+        font-size: 1rem;
+    }
+
+    .contact .btn,
+    .hero .btn {
+        font-size: 1rem;
+    }
+
+    .hero .hero-image img {
+        max-width: 90%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero .btn,
+    .contact .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .about-text p,
+    .project p {
+        font-size: 0.9rem;
+    }
+
+    .contact form input,
+    .contact form textarea {
+        padding: 12px;
+    }
+
+    .home-button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}

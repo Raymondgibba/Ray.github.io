@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Irrigation System</title>
+    <link rel="stylesheet" href="irr.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">Smart Irrigatin System</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-details">
+        <h1>Smart Irrigation System</h1>
+        <img src="irrigation.jpg" alt="Smart Irrigation System">
+
+        <div class="details-content">
+            <h2>Why is this project important?</h2>
+            <p>
+                The **Smart Irrigation System** automatically waters plants based on the soil moisture level, ensuring that your plants are always properly hydrated without over-watering. 
+                This system is perfect for gardeners who want to save time, conserve water, and optimize the health of their plants.
+            </p>
+
+            <h2>Components Needed</h2>
+            <ul>
+                <li>Arduino Uno</li>
+                <li>Soil Moisture Sensor</li>
+                <li>Relay Module</li>
+                <li>Water Pump</li>
+                <li>Jumper Wires</li>
+                <li>Power Supply</li>
+                <li>Water Reservoir</li>
+            </ul>
+
+            <h2>How to Build the Smart Irrigation System</h2>
+            <h3>Step 1: Connect the Soil Moisture Sensor</h3>
+            <p>
+                The soil moisture sensor detects the moisture level in the soil. Connect the **VCC** to 5V, **GND** to GND, and the **A0 Pin** (analog output) to **A0** on the Arduino.
+            </p>
+
+            <h3>Step 2: Connect the Relay Module</h3>
+            <p>
+                The relay will control the water pump. Connect the **VCC** to 5V, **GND** to GND, and the **IN Pin** to **Pin 8** on the Arduino.
+            </p>
+
+            <h3>Step 3: Connect the Water Pump</h3>
+            <p>
+                The water pump will be powered using the relay. Connect the **positive terminal** of the pump to the **NO (Normally Open) Pin** of the relay and the **negative terminal** to the **GND**.
+            </p>
+
+            <h3>Step 4: Program the Arduino</h3>
+            <p>
+                Upload the following code to the Arduino:
+            </p>
+            <pre>
+const int soilMoisturePin = A0;   // Soil moisture sensor pin
+const int relayPin = 8;            // Relay control pin
+
+void setup() {
+  pinMode(relayPin, OUTPUT);  // Set relay pin as output
+  Serial.begin(9600);  // Initialize serial communication for debugging
+}
+
+void loop() {
+  int soilMoistureValue = analogRead(soilMoisturePin);  // Read soil moisture level
+  Serial.print("Soil Moisture: ");
+  Serial.println(soilMoistureValue);
+
+  if (soilMoistureValue < 400) {  // If the soil is dry
+    digitalWrite(relayPin, HIGH);  // Activate the relay (turn on the water pump)
+    Serial.println("Watering...");  // Output status
+  } else {
+    digitalWrite(relayPin, LOW);  // Deactivate the relay (turn off the water pump)
+    Serial.println("Soil Moisture is sufficient.");  // Output status
+  }
+  delay(2000);  // Wait for 2 seconds before reading again
+}
+            </pre>
+
+            <h3>Step 5: Assemble the Circuit</h3>
+            <p>
+                - Place the soil moisture sensor into the soil in your garden or plant pot.<br>
+                - Connect the water pump to the relay and power it using the relay's output.<br>
+                - Ensure your water reservoir is connected to the pump to supply water to the plants.
+            </p>
+
+            <h3>Step 6: Test the System</h3>
+            <p>
+                After uploading the code, place the soil moisture sensor into the soil. If the soil is dry, the water pump will activate and water the plants. 
+                Once the moisture level is sufficient, the pump will turn off automatically.
+            </p>
+        </div>
+
+        <a href="projects.html" class="back-button">Back to Projects</a>
+    </section>
+
+</body>
+</html>
